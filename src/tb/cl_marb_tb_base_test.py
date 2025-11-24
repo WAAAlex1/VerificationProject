@@ -1,4 +1,4 @@
-    import pyuvm
+import pyuvm
 from pyuvm import *
 
 from cocotb.clock import Clock
@@ -36,9 +36,14 @@ class cl_marb_tb_base_test(uvm_test):
         # Access the DUT through the cocotb.top handler
         self.dut = cocotb.top
 
-
         # APB configuration interface
         self.apb_if = None
+
+        # SDT Configuration interfaces
+        self.sdt_client0_if = None
+        self.sdt_client1_if = None
+        self.sdt_client2_if = None
+        self.sdt_mem_if = None
 
         # Configuration object handler
         self.cfg = None
@@ -56,13 +61,15 @@ class cl_marb_tb_base_test(uvm_test):
         # Create configuration object
         self.cfg = cl_marb_tb_config("cfg")
 
+        # ------------------------------------------------------------------------------
+        # APB
+        # ------------------------------------------------------------------------------
         # APB agent configuration
         self.cfg.apb_cfg.driver                      = apb_common.DriverType.PRODUCER
         self.cfg.apb_cfg.seq_item_override           = apb_common.SequenceItemOverride.USER_DEFINED
         self.cfg.apb_cfg.create_default_coverage     = False
         self.cfg.apb_cfg.enable_masked_data          = False
         self.cfg.apb_cfg.active_low_reset            = False
-
 
         # Set ADDR and DATA width for APB interface
         self.cfg.apb_cfg.ADDR_WIDTH  = 32
@@ -72,6 +79,7 @@ class cl_marb_tb_base_test(uvm_test):
         # Set enable_masked_data as false for register access
         self.cfg.apb_cfg.enable_masked_data = False
 
+        # Set interfaces in apb
         self.apb_if       = cl_apb_interface(self.dut.clk, self.dut.rst)
 
         # Set interfaces in cfg
@@ -79,17 +87,95 @@ class cl_marb_tb_base_test(uvm_test):
         self.apb_if._set_width_parameters(self.cfg.apb_cfg.ADDR_WIDTH, self.cfg.apb_cfg.DATA_WIDTH)
 
         # Assertions checkers
-
         self.assert_check_apb = if_apb_assert_check(clk_signal  = self.dut.clk,
                                                     rst_signal  = self.dut.rst)
         self.assert_check_apb.cfg = self.cfg.apb_cfg
 
-        # Update the interfaces assertions WIDTHs and rd_data val when no ACK
+        # TODO: Update the interfaces assertions WIDTHs and rd_data val when no ACK
+
+        # ------------------------------------------------------------------------------
+        # SDT
+        # ------------------------------------------------------------------------------
+
+        # SDT CLIENT 0 agent configuration
+        self.cfg.sdt_client0_cfg.driver                     = sdt_common.DriverType.PRODUCER
+        self.cfg.sdt_client0_cfg.seq_item_override          = sdt_common.SequenceItemOverride.DEFAULT
+        self.cfg.sdt_client0_cfg.enable_transaction_coverage= False
+        self.cfg.sdt_client0_cfg.enable_delay_coverage      = False
+        self.cfg.sdt_client0_cfg.ADDR_WIDTH                 = self.dut.ADDR_WIDTH
+        self.cfg.sdt_client0_cfg.DATA_WIDTH                 = self.dut.DATA_WIDTH
+
+        self.sdt_client0_if = cl_sdt_interface(self.dut.clk, self.dut.rst, "sdt_client0_if")
+        self.cfg.sdt_client0_cfg.vif = self.sdt_client0_if
+
+        self.cfg.sdt_client0_cfg.is_active                  = uvm_active_passive_enum.UVM_ACTIVE
+        self.cfg.sdt_client0_cfg.num_consumer_seq           = None       # TODO: change this if concrete amount of sequences defined=
+
+        # TODO: Implement assert checker such that this works
+        #self.assert_check_sdt_client0 = if_sdt_assert_check(clk_signal = self.dut.clk, rst_signal  = self.dut.rst)
+        #self.assert_check_sdt_client0.cfg = self.cfg.sdt_client0_cfg
+
+        # SDT CLIENT 1 agent configuration
+        self.cfg.sdt_client1_cfg.driver                     = sdt_common.DriverType.PRODUCER
+        self.cfg.sdt_client1_cfg.seq_item_override          = sdt_common.SequenceItemOverride.DEFAULT
+        self.cfg.sdt_client1_cfg.enable_transaction_coverage= False
+        self.cfg.sdt_client1_cfg.enable_delay_coverage      = False
+        self.cfg.sdt_client1_cfg.ADDR_WIDTH                 = self.dut.ADDR_WIDTH
+        self.cfg.sdt_client1_cfg.DATA_WIDTH                 = self.dut.DATA_WIDTH
+
+        self.sdt_client1_if = cl_sdt_interface(self.dut.clk, self.dut.rst, "sdt_client1_if")
+        self.cfg.sdt_client1_cfg.vif = self.sdt_client1_if
+
+        self.cfg.sdt_client1_cfg.is_active                  = uvm_active_passive_enum.UVM_ACTIVE
+        self.cfg.sdt_client1_cfg.num_consumer_seq           = None  # TODO: change this if concrete amount of sequences defined=
+
+        # TODO: Implement assert checker such that this works
+        #self.assert_check_sdt_client1 = if_sdt_assert_check(clk_signal = self.dut.clk, rst_signal = self.dut.rst)
+        #self.assert_check_sdt_client1.cfg = self.cfg.sdt_client1_cfg
+
+        # SDT CLIENT 2 agent configuration
+        self.cfg.sdt_client2_cfg.driver                     = sdt_common.DriverType.PRODUCER
+        self.cfg.sdt_client2_cfg.seq_item_override          = sdt_common.SequenceItemOverride.DEFAULT
+        self.cfg.sdt_client2_cfg.enable_transaction_coverage= False
+        self.cfg.sdt_client2_cfg.enable_delay_coverage      = False
+        self.cfg.sdt_client2_cfg.ADDR_WIDTH                 = self.dut.ADDR_WIDTH
+        self.cfg.sdt_client2_cfg.DATA_WIDTH                 = self.dut.DATA_WIDTH
+
+        self.sdt_client2_if = cl_sdt_interface(self.dut.clk, self.dut.rst, "sdt_client2_if")
+        self.cfg.sdt_client2_cfg.vif = self.sdt_client2_if
+
+        #self.cfg.sdt_client2_cfg.is_active                  = uvm_active_passive_enum.UVM_ACTIVE
+        #self.cfg.sdt_client2_cfg.num_consumer_seq           = None  # TODO: change this if concrete amount of sequences defined=
+
+        # TODO: Implement assert checker such that this works
+        self.assert_check_sdt_client2 = if_sdt_assert_check(clk_signal = self.dut.clk, rst_signal = self.dut.rst)
+        self.assert_check_sdt_client2.cfg = self.cfg.sdt_client2_cfg
+
+        # SDT MEM agent configuration
+        self.cfg.sdt_mem_cfg.driver                         = sdt_common.DriverType.CONSUMER
+        self.cfg.sdt_mem_cfg.seq_item_override              = sdt_common.SequenceItemOverride.DEFAULT
+        self.cfg.sdt_mem_cfg.enable_transaction_coverage    = False
+        self.cfg.sdt_mem_cfg.enable_delay_coverage          = False
+        self.cfg.sdt_mem_cfg.ADDR_WIDTH                     = self.dut.ADDR_WIDTH
+        self.cfg.sdt_mem_cfg.DATA_WIDTH                     = self.dut.DATA_WIDTH
+
+        self.sdt_mem_if = cl_sdt_interface(self.dut.clk, self.dut.rst, "sdt_mem_if")
+        self.cfg.sdt_mem_cfg.vif = self.sdt_mem_if
+
+        self.cfg.sdt_mem_cfg.is_active                      = uvm_active_passive_enum.UVM_ACTIVE
+        self.cfg.sdt_mem_cfg.num_consumer_seq               = None  # TODO: change this if concrete amount of sequences defined=
+
+        # TODO: Implement assert checker such that this works
+        #self.assert_check_sdt_mem = if_sdt_assert_check(clk_signal = self.dut.clk, rst_signal = self.dut.rst)
+        #self.assert_check_sdt_mem.cfg = self.cfg.sdt_mem_cfg
+
+        # ------------------------------------------------------------------------------
+        # ENVIRONMENT
+        # ------------------------------------------------------------------------------
 
         # Instantiate environment
         ConfigDB().set(self, "marb_tb_env", "cfg", self.cfg)
         self.marb_tb_env = cl_marb_tb_env("marb_tb_env", self)
-
 
         self.logger.info("End build_phase() -> MARB base test")
 
@@ -97,6 +183,9 @@ class cl_marb_tb_base_test(uvm_test):
         self.logger.info("Start connect_phase() -> MARB base test")
         super().connect_phase()
 
+        # ------------------------------------------------------------------------------
+        # APB
+        # ------------------------------------------------------------------------------
 
         self.apb_if.connect(wr_signal            = self.dut.conf_wr,
                             sel_signal           = self.dut.conf_sel,
@@ -109,6 +198,45 @@ class cl_marb_tb_base_test(uvm_test):
                             slverr_signal        = self.dut.conf_slverr)
 
         self.assert_check_apb.connect()
+
+        # ------------------------------------------------------------------------------
+        # SDT
+        # ------------------------------------------------------------------------------
+        self.sdt_client0_if.connect(
+            rd_signal=self.dut.c0_rd,
+            wr_signal=self.dut.c0_wr,
+            addr_signal=self.dut.c0_addr,
+            wr_data_signal=self.dut.c0_wr_data,
+            rd_data_signal=self.dut.c0_rd_data,
+            ack_signal=self.dut.c0_ack
+        )
+
+        self.sdt_client1_if.connect(
+            rd_signal=self.dut.c1_rd,
+            wr_signal=self.dut.c1_wr,
+            addr_signal=self.dut.c1_addr,
+            wr_data_signal=self.dut.c1_wr_data,
+            rd_data_signal=self.dut.c1_rd_data,
+            ack_signal=self.dut.c1_ack
+        )
+
+        self.sdt_client2_if.connect(
+            rd_signal=self.dut.c2_rd,
+            wr_signal=self.dut.c2_wr,
+            addr_signal=self.dut.c2_addr,
+            wr_data_signal=self.dut.c2_wr_data,
+            rd_data_signal=self.dut.c2_rd_data,
+            ack_signal=self.dut.c2_ack
+        )
+
+        self.sdt_mem_if.connect(
+            rd_signal=self.dut.m_rd,
+            wr_signal=self.dut.m_wr,
+            addr_signal=self.dut.m_addr,
+            wr_data_signal=self.dut.m_wr_data,
+            rd_data_signal=self.dut.m_rd_data,
+            ack_signal=self.dut.m_ack
+        )
 
         self.logger.info("End connect_phase() -> MARB base test")
 
