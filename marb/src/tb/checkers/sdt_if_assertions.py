@@ -1,4 +1,4 @@
-""" SSDT interface asserations wrapper"""
+""" SDT interface asserations wrapper"""
 
 import pyuvm
 from pyuvm import *
@@ -41,13 +41,8 @@ class sdt_if_assertions():
     def set_width_values(self, DATA_WIDTH=1):
         self.DATA_WIDTH = DATA_WIDTH
 
-    def check_assertions(self):
-        cocotb.start_soon(self.reset_values())
-        cocotb.start_soon(self.data_validity())
-        cocotb.start_soon(self.data_invalidity())
-
-    #Clients are producers
-    def check_prod_assertions(self):
+    #Mem gets these outputs from our DUT
+    def check_cons_assertions(self):
         cocotb.start_soon(self.reset_values(self.wr))
         cocotb.start_soon(self.data_validity(self.wr,self.wr_data))
         cocotb.start_soon(self.data_invalidity(self.wr,self.wr_data))
@@ -56,8 +51,8 @@ class sdt_if_assertions():
         cocotb.start_soon(self.wr_data_not_x_invar(self.wr,self.wr_data))
 
 
-    #Mem is consumer
-    def check_cons_assertions(self):
+    #Clients gets these outputs from our DUT
+    def check_prod_assertions(self):
         cocotb.start_soon(self.reset_values(self.ack))
         cocotb.start_soon(self.data_validity(self.ack,self.rd_data))
         cocotb.start_soon(self.data_invalidity(self.ack,self.rd_data))
@@ -152,7 +147,7 @@ class sdt_if_assertions():
             try:
                 if wr_sig.value.binstr == '1':
                     assert 'x' not in wr_data_sig.value.binstr.lower(), \
-                        f"When rd or wr was high, addr was {wr_data_sig.value.binstr}"
+                        f"When rd or wr was high, addr was {wr_data_sig.value.binstr}"          # Broken on purpose
             except AssertionError as msg:
                 self.passed = False
                 print(msg)
