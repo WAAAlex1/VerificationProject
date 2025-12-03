@@ -5,6 +5,7 @@ from cocotb.clock import Clock
 import os, warnings
 
 from uvc.sdt.src import *
+from uvc.sdt.src.sdt_if_assertions import * #Need this for some reason
 from uvc.apb.src import *
 
 from cl_marb_tb_config import cl_marb_tb_config
@@ -33,6 +34,12 @@ class cl_marb_tb_base_test(uvm_test):
 
         # APB configuration interface
         self.apb_if = None
+
+        #SSDT assertion checkers:
+        self.assert_check_sdt_client0 = None
+        self.assert_check_sdt_client1 = None
+        self.assert_check_sdt_client2 = None
+        self.assert_check_sdt_mem     = None
 
         # Configuration object handler
         self.cfg = None
@@ -106,17 +113,53 @@ class cl_marb_tb_base_test(uvm_test):
 
         # TODO: Implement assert checkers such that this works
 
-        #self.assert_check_sdt_client0 = if_sdt_assert_check(clk_signal = self.dut.clk, rst_signal  = self.dut.rst)
-        #self.assert_check_sdt_client0.cfg = self.cfg.sdt_client0_cfg
+        self.assert_check_sdt_client0 = sdt_if_assertions(clk_signal     = self.dut.clk,
+                                                          rst_signal     = self.dut.rst,
+                                                          wr_signal      = self.dut.c0_wr,
+                                                          wr_data_signal = self.dut.c0_wr_data,
+                                                          rd_signal      = self.dut.c0_rd,
+                                                          rd_data_signal = self.dut.c0_rd_data,
+                                                          addr_signal    = self.dut.c0_addr,
+                                                          ack_signal     = self.dut.c0_ack,
+                                                          name           = "ssdt_if_assertion_c0"
+                                                          )
+        self.assert_check_sdt_client0.set_width_values(self.cfg.sdt_client0_cfg.DATA_WIDTH)
 
-        #self.assert_check_sdt_client1 = if_sdt_assert_check(clk_signal = self.dut.clk, rst_signal = self.dut.rst)
-        #self.assert_check_sdt_client1.cfg = self.cfg.sdt_client1_cfg
+        self.assert_check_sdt_client1 = sdt_if_assertions(clk_signal=self.dut.clk,
+                                                          rst_signal=self.dut.rst,
+                                                          wr_signal=self.dut.c1_wr,
+                                                          wr_data_signal=self.dut.c1_wr_data,
+                                                          rd_signal=self.dut.c1_rd,
+                                                          rd_data_signal=self.dut.c1_rd_data,
+                                                          addr_signal=self.dut.c1_addr,
+                                                          ack_signal=self.dut.c1_ack,
+                                                          name="ssdt_if_assertion_c1"
+                                                          )
+        self.assert_check_sdt_client1.set_width_values(self.cfg.sdt_client1_cfg.DATA_WIDTH)
 
-        #self.assert_check_sdt_client2 = if_sdt_assert_check(clk_signal = self.dut.clk, rst_signal = self.dut.rst)
-        #self.assert_check_sdt_client2.cfg = self.cfg.sdt_client2_cfg
+        self.assert_check_sdt_client2 = sdt_if_assertions(clk_signal=self.dut.clk,
+                                                          rst_signal=self.dut.rst,
+                                                          wr_signal=self.dut.c2_wr,
+                                                          wr_data_signal=self.dut.c2_wr_data,
+                                                          rd_signal=self.dut.c2_rd,
+                                                          rd_data_signal=self.dut.c2_rd_data,
+                                                          addr_signal=self.dut.c2_addr,
+                                                          ack_signal=self.dut.c2_ack,
+                                                          name="ssdt_if_assertion_c2"
+                                                          )
+        self.assert_check_sdt_client2.set_width_values(self.cfg.sdt_client2_cfg.DATA_WIDTH)
 
-        #self.assert_check_sdt_mem = if_sdt_assert_check(clk_signal = self.dut.clk, rst_signal = self.dut.rst)
-        #self.assert_check_sdt_mem.cfg = self.cfg.sdt_mem_cfg
+        self.assert_check_sdt_mem = sdt_if_assertions(clk_signal=self.dut.clk,
+                                                          rst_signal=self.dut.rst,
+                                                          wr_signal=self.dut.m_wr,
+                                                          wr_data_signal=self.dut.m_wr_data,
+                                                          rd_signal=self.dut.m_rd,
+                                                          rd_data_signal=self.dut.m_rd_data,
+                                                          addr_signal=self.dut.m_addr,
+                                                          ack_signal=self.dut.m_ack,
+                                                          name="ssdt_if_assertion_m"
+                                                          )
+        self.assert_check_sdt_mem.set_width_values(self.cfg.sdt_mem_cfg.DATA_WIDTH)
 
         # ------------------------------------------------------------------------------
         # ENVIRONMENT
@@ -157,19 +200,15 @@ class cl_marb_tb_base_test(uvm_test):
 
         self.cfg.sdt_client0_cfg.vif._set_width_values(ADDR_WIDTH = self.cfg.dut.ADDR_WIDTH,
                                                        DATA_WIDTH = self.cfg.dut.DATA_WIDTH)
-        #self.assert_check_sdt_cl0.connect()
 
         self.cfg.sdt_client1_cfg.vif._set_width_values(ADDR_WIDTH = self.cfg.dut.ADDR_WIDTH,
                                                        DATA_WIDTH = self.cfg.dut.DATA_WIDTH)
-        # self.assert_check_sdt_cl1.connect()
 
         self.cfg.sdt_client2_cfg.vif._set_width_values(ADDR_WIDTH = self.cfg.dut.ADDR_WIDTH,
                                                        DATA_WIDTH = self.cfg.dut.DATA_WIDTH)
-        # self.assert_check_sdt_cl2.connect()
 
         self.cfg.sdt_mem_cfg.vif._set_width_values(ADDR_WIDTH = self.cfg.dut.ADDR_WIDTH,
                                                    DATA_WIDTH = self.cfg.dut.DATA_WIDTH)
-        # self.assert_check_sdt_mem.connect()
 
         self.cfg.sdt_client0_cfg.vif.connect(
             rd_signal=self.dut.c0_rd,
@@ -217,6 +256,10 @@ class cl_marb_tb_base_test(uvm_test):
         await self.trigger_reset()
 
         # TODO: Start SDT IF assertions chekers for producers and consumer
+        self.assert_check_sdt_client0.check_prod_assertions()
+        self.assert_check_sdt_client1.check_prod_assertions()
+        self.assert_check_sdt_client2.check_prod_assertions()
+        self.assert_check_sdt_mem.check_cons_assertions()
 
         # TODO: Start the global ACK checker
 
