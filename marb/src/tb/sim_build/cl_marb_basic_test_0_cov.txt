@@ -1,0 +1,213 @@
+Coverage report for cl_marb_basic_test #0 
+------------------------------------------------
+ 
+TYPE covergroup_fulltrans : 0.00%
+    CVP fulltrans_access : 0.00%
+    Bins:
+        RD : 0
+        WR : 0
+    CVP fulltrans_addr : 0.00%
+    Bins:
+        low : 0
+        med : 0
+        high : 0
+    CVP fulltrans_data : 0.00%
+    Bins:
+        low : 0
+        med : 0
+        high : 0
+    CROSS fulltrans_cross : 0.00%
+    Bins:
+        <RD,low,low> : 0
+        <RD,low,med> : 0
+        <RD,low,high> : 0
+        <RD,med,low> : 0
+        <RD,med,med> : 0
+        <RD,med,high> : 0
+        <RD,high,low> : 0
+        <RD,high,med> : 0
+        <RD,high,high> : 0
+        <WR,low,low> : 0
+        <WR,low,med> : 0
+        <WR,low,high> : 0
+        <WR,med,low> : 0
+        <WR,med,med> : 0
+        <WR,med,high> : 0
+        <WR,high,low> : 0
+        <WR,high,med> : 0
+        <WR,high,high> : 0
+    INST uvm_test_top.marb_tb_env.sdt_client0_agent.coverage.cg_fulltrans : 0.00%
+        CVP fulltrans_access : 0.00%
+        Bins:
+            RD : 0
+            WR : 0
+        CVP fulltrans_addr : 0.00%
+        Bins:
+            low : 0
+            med : 0
+            high : 0
+        CVP fulltrans_data : 0.00%
+        Bins:
+            low : 0
+            med : 0
+            high : 0
+        CROSS fulltrans_cross : 0.00%
+        Bins:
+            <RD,low,low> : 0
+            <RD,low,med> : 0
+            <RD,low,high> : 0
+            <RD,med,low> : 0
+            <RD,med,med> : 0
+            <RD,med,high> : 0
+            <RD,high,low> : 0
+            <RD,high,med> : 0
+            <RD,high,high> : 0
+            <WR,low,low> : 0
+            <WR,low,med> : 0
+            <WR,low,high> : 0
+            <WR,med,low> : 0
+            <WR,med,med> : 0
+            <WR,med,high> : 0
+            <WR,high,low> : 0
+            <WR,high,med> : 0
+            <WR,high,high> : 0
+    INST uvm_test_top.marb_tb_env.sdt_client1_agent.coverage.cg_fulltrans : 0.00%
+        CVP fulltrans_access : 0.00%
+        Bins:
+            RD : 0
+            WR : 0
+        CVP fulltrans_addr : 0.00%
+        Bins:
+            low : 0
+            med : 0
+            high : 0
+        CVP fulltrans_data : 0.00%
+        Bins:
+            low : 0
+            med : 0
+            high : 0
+        CROSS fulltrans_cross : 0.00%
+        Bins:
+            <RD,low,low> : 0
+            <RD,low,med> : 0
+            <RD,low,high> : 0
+            <RD,med,low> : 0
+            <RD,med,med> : 0
+            <RD,med,high> : 0
+            <RD,high,low> : 0
+            <RD,high,med> : 0
+            <RD,high,high> : 0
+            <WR,low,low> : 0
+            <WR,low,med> : 0
+            <WR,low,high> : 0
+            <WR,med,low> : 0
+            <WR,med,med> : 0
+            <WR,med,high> : 0
+            <WR,high,low> : 0
+            <WR,high,med> : 0
+            <WR,high,high> : 0
+    INST uvm_test_top.marb_tb_env.sdt_client2_agent.coverage.cg_fulltrans : 0.00%
+        CVP fulltrans_access : 0.00%
+        Bins:
+            RD : 0
+            WR : 0
+        CVP fulltrans_addr : 0.00%
+        Bins:
+            low : 0
+            med : 0
+            high : 0
+        CVP fulltrans_data : 0.00%
+        Bins:
+            low : 0
+            med : 0
+            high : 0
+        CROSS fulltrans_cross : 0.00%
+        Bins:
+            <RD,low,low> : 0
+            <RD,low,med> : 0
+            <RD,low,high> : 0
+            <RD,med,low> : 0
+            <RD,med,med> : 0
+            <RD,med,high> : 0
+            <RD,high,low> : 0
+            <RD,high,med> : 0
+            <RD,high,high> : 0
+            <WR,low,low> : 0
+            <WR,low,med> : 0
+            <WR,low,high> : 0
+            <WR,med,low> : 0
+            <WR,med,med> : 0
+            <WR,med,high> : 0
+            <WR,high,low> : 0
+            <WR,high,med> : 0
+            <WR,high,high> : 0
+    INST uvm_test_top.marb_tb_env.sdt_mem_agent.coverage.cg_fulltrans : 0.00%
+        CVP fulltrans_access : 0.00%
+        Bins:
+            RD : 0
+            WR : 0
+        CVP fulltrans_addr : 0.00%
+        Bins:
+            low : 0
+            med : 0
+            high : 0
+        CVP fulltrans_data : 0.00%
+        Bins:
+            low : 0
+            med : 0
+            high : 0
+        CROSS fulltrans_cross : 0.00%
+        Bins:
+            <RD,low,low> : 0
+            <RD,low,med> : 0
+            <RD,low,high> : 0
+            <RD,med,low> : 0
+            <RD,med,med> : 0
+            <RD,med,high> : 0
+            <RD,high,low> : 0
+            <RD,high,med> : 0
+            <RD,high,high> : 0
+            <WR,low,low> : 0
+            <WR,low,med> : 0
+            <WR,low,high> : 0
+            <WR,med,low> : 0
+            <WR,med,med> : 0
+            <WR,med,high> : 0
+            <WR,high,low> : 0
+            <WR,high,med> : 0
+            <WR,high,high> : 0
+TYPE covergroup_delays : 0.00%
+    CVP consumer_delay_rdwr1_ack1 : 0.00%
+    Bins:
+        0 : 0
+        [1,5] : 0
+        [6,15] : 0
+        >15 : 0
+    INST uvm_test_top.marb_tb_env.sdt_client0_agent.coverage.cg_delays : 0.00%
+        CVP consumer_delay_rdwr1_ack1 : 0.00%
+        Bins:
+            0 : 0
+            [1,5] : 0
+            [6,15] : 0
+            >15 : 0
+    INST uvm_test_top.marb_tb_env.sdt_client1_agent.coverage.cg_delays : 0.00%
+        CVP consumer_delay_rdwr1_ack1 : 0.00%
+        Bins:
+            0 : 0
+            [1,5] : 0
+            [6,15] : 0
+            >15 : 0
+    INST uvm_test_top.marb_tb_env.sdt_client2_agent.coverage.cg_delays : 0.00%
+        CVP consumer_delay_rdwr1_ack1 : 0.00%
+        Bins:
+            0 : 0
+            [1,5] : 0
+            [6,15] : 0
+            >15 : 0
+    INST uvm_test_top.marb_tb_env.sdt_mem_agent.coverage.cg_delays : 0.00%
+        CVP consumer_delay_rdwr1_ack1 : 0.00%
+        Bins:
+            0 : 0
+            [1,5] : 0
+            [6,15] : 0
+            >15 : 0

@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1759172539" />
+    <testcase name="test_ssdt_b2b_default_seq" classname="test_ssdt_b2b_tests_lib" file="/mnt/common/itd/software/install/python/3.12.0.RL8/lib/python3.12/site-packages/cocotb/decorators.py" lineno="56" time="0.12468862533569336" sim_time_ns="37.501" ratio_time="300.75718534098684" />
+    <testcase name="test_ssdt_b2b_default_accumulate_seq" classname="test_ssdt_b2b_tests_lib" file="/mnt/common/itd/software/install/python/3.12.0.RL8/lib/python3.12/site-packages/cocotb/decorators.py" lineno="87" time="0.09951591491699219" sim_time_ns="70.0" ratio_time="703.4050790608529" />
+    <testcase name="test_ssdt_b2b_rand_n_seq" classname="test_ssdt_b2b_tests_lib" file="/mnt/common/itd/software/install/python/3.12.0.RL8/lib/python3.12/site-packages/cocotb/decorators.py" lineno="125" time="1.2855734825134277" sim_time_ns="945.0" ratio_time="735.0805013124791" />
+    <testcase name="test_sssdt_b2b_inf_accum_seq" classname="test_ssdt_b2b_tests_lib" file="/mnt/common/itd/software/install/python/3.12.0.RL8/lib/python3.12/site-packages/cocotb/decorators.py" lineno="164" time="0.22996807098388672" sim_time_ns="135.0" ratio_time="587.038015418493" />
+  </testsuite>
+</testsuites>

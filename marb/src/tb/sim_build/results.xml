@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1764758962" />
+    <testcase name="cl_marb_random_traffic_dynamic_test" classname="tests.cl_marb_random_traffic_dynamic_test" file="/home/awa/VerificationCourse/L13_Exercise/.venv/lib/python3.10/site-packages/cocotb/decorators.py" lineno="12" time="1.9610908031463623" sim_time_ns="1232.001" ratio_time="628.2223128186542" />
+  </testsuite>
+</testsuites>

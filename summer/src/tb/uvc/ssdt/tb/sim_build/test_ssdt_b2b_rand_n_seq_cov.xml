@@ -1,0 +1,61 @@
+<UCIS xmlns:ucis="http://www.w3.org/2001/XMLSchema-instance" writtenBy="jacob" writtenTime="2025-09-29T00:00:00" ucisVersion="1.0">
+  <sourceFiles fileName="__null__file__" id="1"/>
+  <sourceFiles fileName="&lt;unknown&gt;" id="2"/>
+  <sourceFiles fileName="/home/jacob/work/euprojects/edu4chip/edu4chip_contrib/sat_filter/src/tb/uvc/ssdt/src/uvc_ssdt_coverage.py" id="3"/>
+  <historyNodes historyNodeId="0" logicalName="logicalName" physicalName="foo.ucis" kind="1" testStatus="true" simtime="0.0" timeunit="ns" runCwd="." cpuTime="0.0" seed="0" cmd="" args="" compulsory="0" date="2025-09-29T21:02:22" userName="user" cost="0.0" toolCategory="UCIS:simulator" ucisVersion="1.0" vendorId="unknown" vendorTool="unknown" vendorToolVersion="unknown"/>
+  <instanceCoverages name="cg_inst" key="0">
+    <id file="1" line="1" inlineCount="1"/>
+    <covergroupCoverage>
+      <cgInstance name="uvm_test_top.ssdt_b2b_env.uvc_ssdt_producer.coverage.cg_ssdt" key="0">
+        <options/>
+        <cgId cgName="uvm_test_top.ssdt_b2b_env.uvc_ssdt_producer.coverage.cg_ssdt" moduleName="uvm_test_top.ssdt_b2b_env.uvc_ssdt_producer.coverage.cg_ssdt">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="cp_data" key="0">
+          <options/>
+          <coverpointBin name="data_0" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="18"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="data_max" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="12"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="data_others" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="156"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+      </cgInstance>
+      <cgInstance name="uvm_test_top.ssdt_b2b_env.uvc_ssdt_consumer.coverage.cg_ssdt" key="0">
+        <options/>
+        <cgId cgName="uvm_test_top.ssdt_b2b_env.uvc_ssdt_producer.coverage.cg_ssdt" moduleName="uvm_test_top.ssdt_b2b_env.uvc_ssdt_producer.coverage.cg_ssdt">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="cp_data" key="0">
+          <options/>
+          <coverpointBin name="data_0" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="18"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="data_max" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="12"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="data_others" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="156"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+      </cgInstance>
+    </covergroupCoverage>
+  </instanceCoverages>
+</UCIS>

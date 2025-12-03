@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1762771508" />
+    <testcase name="test_ssdt_b2b_default_seq" classname="test_ssdt_b2b_tests_lib" file="/home/jacob/work/euprojects/edu4chip/edu4chip_contrib/.venv_dev/lib/python3.12/site-packages/cocotb/decorators.py" lineno="56" time="0.12825798988342285" sim_time_ns="37.501" ratio_time="292.38724257323594" />
+    <testcase name="test_ssdt_b2b_default_accumulate_seq" classname="test_ssdt_b2b_tests_lib" file="/home/jacob/work/euprojects/edu4chip/edu4chip_contrib/.venv_dev/lib/python3.12/site-packages/cocotb/decorators.py" lineno="87" time="0.1409304141998291" sim_time_ns="75.0" ratio_time="532.1775319105743" />
+    <testcase name="test_ssdt_b2b_rand_n_seq" classname="test_ssdt_b2b_tests_lib" file="/home/jacob/work/euprojects/edu4chip/edu4chip_contrib/.venv_dev/lib/python3.12/site-packages/cocotb/decorators.py" lineno="125" time="0.8217122554779053" sim_time_ns="560.0" ratio_time="681.5037700445465" />
+    <testcase name="test_sssdt_b2b_inf_accum_seq" classname="test_ssdt_b2b_tests_lib" file="/home/jacob/work/euprojects/edu4chip/edu4chip_contrib/.venv_dev/lib/python3.12/site-packages/cocotb/decorators.py" lineno="164" time="0.2519412040710449" sim_time_ns="145.0" ratio_time="575.531106690716" />
+  </testsuite>
+</testsuites>

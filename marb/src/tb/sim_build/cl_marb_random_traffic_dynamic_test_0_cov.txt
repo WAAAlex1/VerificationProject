@@ -1,0 +1,213 @@
+Coverage report for cl_marb_random_traffic_dynamic_test #0 
+------------------------------------------------
+ 
+TYPE covergroup_fulltrans : 100.00%
+    CVP fulltrans_access : 100.00%
+    Bins:
+        RD : 96
+        WR : 68
+    CVP fulltrans_addr : 100.00%
+    Bins:
+        low : 66
+        med : 54
+        high : 44
+    CVP fulltrans_data : 100.00%
+    Bins:
+        low : 54
+        med : 46
+        high : 64
+    CROSS fulltrans_cross : 100.00%
+    Bins:
+        <RD,low,low> : 8
+        <RD,low,med> : 10
+        <RD,low,high> : 16
+        <RD,med,low> : 16
+        <RD,med,med> : 4
+        <RD,med,high> : 14
+        <RD,high,low> : 8
+        <RD,high,med> : 6
+        <RD,high,high> : 14
+        <WR,low,low> : 10
+        <WR,low,med> : 14
+        <WR,low,high> : 8
+        <WR,med,low> : 8
+        <WR,med,med> : 6
+        <WR,med,high> : 6
+        <WR,high,low> : 4
+        <WR,high,med> : 6
+        <WR,high,high> : 6
+    INST uvm_test_top.marb_tb_env.sdt_client0_agent.coverage.cg_fulltrans : 87.50%
+        CVP fulltrans_access : 100.00%
+        Bins:
+            RD : 9
+            WR : 2
+        CVP fulltrans_addr : 100.00%
+        Bins:
+            low : 7
+            med : 3
+            high : 1
+        CVP fulltrans_data : 100.00%
+        Bins:
+            low : 3
+            med : 3
+            high : 5
+        CROSS fulltrans_cross : 50.00%
+        Bins:
+            <RD,low,low> : 1
+            <RD,low,med> : 1
+            <RD,low,high> : 3
+            <RD,med,low> : 1
+            <RD,med,med> : 1
+            <RD,med,high> : 1
+            <RD,high,low> : 0
+            <RD,high,med> : 0
+            <RD,high,high> : 1
+            <WR,low,low> : 1
+            <WR,low,med> : 1
+            <WR,low,high> : 0
+            <WR,med,low> : 0
+            <WR,med,med> : 0
+            <WR,med,high> : 0
+            <WR,high,low> : 0
+            <WR,high,med> : 0
+            <WR,high,high> : 0
+    INST uvm_test_top.marb_tb_env.sdt_client1_agent.coverage.cg_fulltrans : 98.61%
+        CVP fulltrans_access : 100.00%
+        Bins:
+            RD : 27
+            WR : 26
+        CVP fulltrans_addr : 100.00%
+        Bins:
+            low : 17
+            med : 19
+            high : 17
+        CVP fulltrans_data : 100.00%
+        Bins:
+            low : 19
+            med : 13
+            high : 21
+        CROSS fulltrans_cross : 94.44%
+        Bins:
+            <RD,low,low> : 3
+            <RD,low,med> : 0
+            <RD,low,high> : 4
+            <RD,med,low> : 5
+            <RD,med,med> : 1
+            <RD,med,high> : 4
+            <RD,high,low> : 3
+            <RD,high,med> : 3
+            <RD,high,high> : 4
+            <WR,low,low> : 3
+            <WR,low,med> : 4
+            <WR,low,high> : 3
+            <WR,med,low> : 4
+            <WR,med,med> : 2
+            <WR,med,high> : 3
+            <WR,high,low> : 1
+            <WR,high,med> : 3
+            <WR,high,high> : 3
+    INST uvm_test_top.marb_tb_env.sdt_client2_agent.coverage.cg_fulltrans : 90.28%
+        CVP fulltrans_access : 100.00%
+        Bins:
+            RD : 12
+            WR : 6
+        CVP fulltrans_addr : 100.00%
+        Bins:
+            low : 9
+            med : 5
+            high : 4
+        CVP fulltrans_data : 100.00%
+        Bins:
+            low : 5
+            med : 7
+            high : 6
+        CROSS fulltrans_cross : 61.11%
+        Bins:
+            <RD,low,low> : 0
+            <RD,low,med> : 4
+            <RD,low,high> : 1
+            <RD,med,low> : 2
+            <RD,med,med> : 0
+            <RD,med,high> : 2
+            <RD,high,low> : 1
+            <RD,high,med> : 0
+            <RD,high,high> : 2
+            <WR,low,low> : 1
+            <WR,low,med> : 2
+            <WR,low,high> : 1
+            <WR,med,low> : 0
+            <WR,med,med> : 1
+            <WR,med,high> : 0
+            <WR,high,low> : 1
+            <WR,high,med> : 0
+            <WR,high,high> : 0
+    INST uvm_test_top.marb_tb_env.sdt_mem_agent.coverage.cg_fulltrans : 100.00%
+        CVP fulltrans_access : 100.00%
+        Bins:
+            RD : 48
+            WR : 34
+        CVP fulltrans_addr : 100.00%
+        Bins:
+            low : 33
+            med : 27
+            high : 22
+        CVP fulltrans_data : 100.00%
+        Bins:
+            low : 27
+            med : 23
+            high : 32
+        CROSS fulltrans_cross : 100.00%
+        Bins:
+            <RD,low,low> : 4
+            <RD,low,med> : 5
+            <RD,low,high> : 8
+            <RD,med,low> : 8
+            <RD,med,med> : 2
+            <RD,med,high> : 7
+            <RD,high,low> : 4
+            <RD,high,med> : 3
+            <RD,high,high> : 7
+            <WR,low,low> : 5
+            <WR,low,med> : 7
+            <WR,low,high> : 4
+            <WR,med,low> : 4
+            <WR,med,med> : 3
+            <WR,med,high> : 3
+            <WR,high,low> : 2
+            <WR,high,med> : 3
+            <WR,high,high> : 3
+TYPE covergroup_delays : 50.00%
+    CVP consumer_delay_rdwr1_ack1 : 50.00%
+    Bins:
+        0 : 0
+        [1,5] : 160
+        [6,15] : 0
+        >15 : 2
+    INST uvm_test_top.marb_tb_env.sdt_client0_agent.coverage.cg_delays : 50.00%
+        CVP consumer_delay_rdwr1_ack1 : 50.00%
+        Bins:
+            0 : 0
+            [1,5] : 9
+            [6,15] : 0
+            >15 : 1
+    INST uvm_test_top.marb_tb_env.sdt_client1_agent.coverage.cg_delays : 25.00%
+        CVP consumer_delay_rdwr1_ack1 : 25.00%
+        Bins:
+            0 : 0
+            [1,5] : 52
+            [6,15] : 0
+            >15 : 0
+    INST uvm_test_top.marb_tb_env.sdt_client2_agent.coverage.cg_delays : 50.00%
+        CVP consumer_delay_rdwr1_ack1 : 50.00%
+        Bins:
+            0 : 0
+            [1,5] : 17
+            [6,15] : 0
+            >15 : 1
+    INST uvm_test_top.marb_tb_env.sdt_mem_agent.coverage.cg_delays : 25.00%
+        CVP consumer_delay_rdwr1_ack1 : 25.00%
+        Bins:
+            0 : 0
+            [1,5] : 82
+            [6,15] : 0
+            >15 : 0

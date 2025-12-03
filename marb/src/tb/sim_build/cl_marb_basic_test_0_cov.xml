@@ -1,0 +1,669 @@
+<UCIS xmlns:ucis="http://www.w3.org/2001/XMLSchema-instance" writtenBy="awa" writtenTime="2025-12-03T00:00:00" ucisVersion="1.0">
+  <sourceFiles fileName="__null__file__" id="1"/>
+  <sourceFiles fileName="&lt;unknown&gt;" id="2"/>
+  <sourceFiles fileName="/home/awa/VerificationCourse/L13_Exercise/marb/src/tb/uvc/sdt/src/cl_sdt_coverage.py" id="3"/>
+  <historyNodes historyNodeId="0" logicalName="logicalName" physicalName="foo.ucis" kind="HistoryNodeKind.TEST" testStatus="true" simtime="0.0" timeunit="ns" runCwd="." cpuTime="0.0" seed="0" cmd="" args="" compulsory="0" date="2025-12-03T10:13:17" userName="user" cost="0.0" toolCategory="UCIS:simulator" ucisVersion="1.0" vendorId="unknown" vendorTool="unknown" vendorToolVersion="unknown"/>
+  <instanceCoverages name="cg_inst" key="0">
+    <id file="1" line="1" inlineCount="1"/>
+    <covergroupCoverage>
+      <cgInstance name="uvm_test_top.marb_tb_env.sdt_client0_agent.coverage.cg_fulltrans" key="0">
+        <options/>
+        <cgId cgName="covergroup_fulltrans" moduleName="covergroup_fulltrans">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="fulltrans_access" key="0">
+          <options/>
+          <coverpointBin name="RD" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="WR" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <coverpoint name="fulltrans_addr" key="0">
+          <options/>
+          <coverpointBin name="low" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="med" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="high" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <coverpoint name="fulltrans_data" key="0">
+          <options/>
+          <coverpointBin name="low" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="med" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="high" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <cross name="fulltrans_cross" key="0">
+          <options/>
+          <crossExpr>fulltrans_access</crossExpr>
+          <crossExpr>fulltrans_addr</crossExpr>
+          <crossExpr>fulltrans_data</crossExpr>
+          <crossBin name="&lt;RD,low,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,low,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,low,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+        </cross>
+      </cgInstance>
+      <cgInstance name="uvm_test_top.marb_tb_env.sdt_client1_agent.coverage.cg_fulltrans" key="0">
+        <options/>
+        <cgId cgName="covergroup_fulltrans" moduleName="covergroup_fulltrans">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="fulltrans_access" key="0">
+          <options/>
+          <coverpointBin name="RD" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="WR" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <coverpoint name="fulltrans_addr" key="0">
+          <options/>
+          <coverpointBin name="low" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="med" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="high" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <coverpoint name="fulltrans_data" key="0">
+          <options/>
+          <coverpointBin name="low" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="med" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="high" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <cross name="fulltrans_cross" key="0">
+          <options/>
+          <crossExpr>fulltrans_access</crossExpr>
+          <crossExpr>fulltrans_addr</crossExpr>
+          <crossExpr>fulltrans_data</crossExpr>
+          <crossBin name="&lt;RD,low,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,low,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,low,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+        </cross>
+      </cgInstance>
+      <cgInstance name="uvm_test_top.marb_tb_env.sdt_client2_agent.coverage.cg_fulltrans" key="0">
+        <options/>
+        <cgId cgName="covergroup_fulltrans" moduleName="covergroup_fulltrans">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="fulltrans_access" key="0">
+          <options/>
+          <coverpointBin name="RD" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="WR" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <coverpoint name="fulltrans_addr" key="0">
+          <options/>
+          <coverpointBin name="low" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="med" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="high" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <coverpoint name="fulltrans_data" key="0">
+          <options/>
+          <coverpointBin name="low" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="med" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="high" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <cross name="fulltrans_cross" key="0">
+          <options/>
+          <crossExpr>fulltrans_access</crossExpr>
+          <crossExpr>fulltrans_addr</crossExpr>
+          <crossExpr>fulltrans_data</crossExpr>
+          <crossBin name="&lt;RD,low,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,low,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,low,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+        </cross>
+      </cgInstance>
+      <cgInstance name="uvm_test_top.marb_tb_env.sdt_mem_agent.coverage.cg_fulltrans" key="0">
+        <options/>
+        <cgId cgName="covergroup_fulltrans" moduleName="covergroup_fulltrans">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="fulltrans_access" key="0">
+          <options/>
+          <coverpointBin name="RD" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="WR" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <coverpoint name="fulltrans_addr" key="0">
+          <options/>
+          <coverpointBin name="low" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="med" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="high" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <coverpoint name="fulltrans_data" key="0">
+          <options/>
+          <coverpointBin name="low" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="med" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="high" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+        <cross name="fulltrans_cross" key="0">
+          <options/>
+          <crossExpr>fulltrans_access</crossExpr>
+          <crossExpr>fulltrans_addr</crossExpr>
+          <crossExpr>fulltrans_data</crossExpr>
+          <crossBin name="&lt;RD,low,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,low,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,low,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,med,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;RD,high,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,low,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,med,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,low&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,med&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+          <crossBin name="&lt;WR,high,high&gt;" key="0" type="default">
+            <index>-1</index>
+            <contents coverageCount="0"/>
+          </crossBin>
+        </cross>
+      </cgInstance>
+    </covergroupCoverage>
+    <covergroupCoverage>
+      <cgInstance name="uvm_test_top.marb_tb_env.sdt_client0_agent.coverage.cg_delays" key="0">
+        <options/>
+        <cgId cgName="covergroup_delays" moduleName="covergroup_delays">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="consumer_delay_rdwr1_ack1" key="0">
+          <options/>
+          <coverpointBin name="0" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="[1,5]" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="[6,15]" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="&gt;15" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+      </cgInstance>
+      <cgInstance name="uvm_test_top.marb_tb_env.sdt_client1_agent.coverage.cg_delays" key="0">
+        <options/>
+        <cgId cgName="covergroup_delays" moduleName="covergroup_delays">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="consumer_delay_rdwr1_ack1" key="0">
+          <options/>
+          <coverpointBin name="0" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="[1,5]" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="[6,15]" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="&gt;15" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+      </cgInstance>
+      <cgInstance name="uvm_test_top.marb_tb_env.sdt_client2_agent.coverage.cg_delays" key="0">
+        <options/>
+        <cgId cgName="covergroup_delays" moduleName="covergroup_delays">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="consumer_delay_rdwr1_ack1" key="0">
+          <options/>
+          <coverpointBin name="0" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="[1,5]" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="[6,15]" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="&gt;15" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+      </cgInstance>
+      <cgInstance name="uvm_test_top.marb_tb_env.sdt_mem_agent.coverage.cg_delays" key="0">
+        <options/>
+        <cgId cgName="covergroup_delays" moduleName="covergroup_delays">
+          <cginstSourceId file="1" line="1" inlineCount="1"/>
+          <cgSourceId file="1" line="1" inlineCount="1"/>
+        </cgId>
+        <coverpoint name="consumer_delay_rdwr1_ack1" key="0">
+          <options/>
+          <coverpointBin name="0" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="[1,5]" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="[6,15]" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+          <coverpointBin name="&gt;15" type="bins" key="0">
+            <range from="-1" to="-1">
+              <contents coverageCount="0"/>
+            </range>
+          </coverpointBin>
+        </coverpoint>
+      </cgInstance>
+    </covergroupCoverage>
+  </instanceCoverages>
+</UCIS>
